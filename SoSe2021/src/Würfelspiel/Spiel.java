@@ -60,4 +60,23 @@ public class Spiel {
 			name = JOptionPane.showInputDialog("Name des Spielers " + (i+1)+" :");
 			spieler[i] = new Spieler(name);
 		}
-	}}
+	}
+	
+	public void spielen()
+	{
+		int index = 0;
+		boolean gewonnen = false;
+		while(!gewonnen)
+		{
+			gewonnen = spieler[index].wuerfeln();
+			index = (index<spieler.length-1) ? index+1 : 0;
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		Spiel spiel = new Spiel();
+		spiel.spielen();
+	}
+	
+}
