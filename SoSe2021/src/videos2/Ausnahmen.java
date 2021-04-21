@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Ausnahmen {
 	
-	public static int division(int nr1, int nr2) {
+	private static int division(int nr1, int nr2) {
 		
 		return nr1/nr2;
 	}
