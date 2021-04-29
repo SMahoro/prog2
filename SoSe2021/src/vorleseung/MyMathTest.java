@@ -35,8 +35,5 @@ class MyMathTest {
         double result = MyMath.ggT(44,12);
         assertEquals(4, result,"ggT of 44 and 12 not 4");
     }  	
-	
-	
-	
 
 }
