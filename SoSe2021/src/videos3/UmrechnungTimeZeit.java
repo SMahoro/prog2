@@ -10,7 +10,7 @@ public class UmrechnungTimeZeit {
 		}
 		else //ends with pm
 		{	
-			final int DIFFERNECE_BETWEEN_H_TO_HH=12;
+		final int DIFFERNECE_BETWEEN_H_TO_HH=12;
 		int hourInt= this.getHoursInt(time);
 		hourInt+=DIFFERNECE_BETWEEN_H_TO_HH;
 		String minutes= this.getMinutesStr(time);
