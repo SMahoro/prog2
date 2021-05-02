@@ -25,7 +25,7 @@ public class MyInteger {
 	private static int charToInt(char c)
 	{
 		int charAsciiValue = c;
-		int intvalue = charAsciiValue-48; // 0 ist 48 bis 9 ist 57
+		int intvalue = charAsciiValue-48;
 		return intvalue;
 	}
 	
@@ -41,9 +41,7 @@ public class MyInteger {
 	}
 	
 	static String removeLeadingZeros(String s) {
-//		  while (s.indexOf("0")==0) {
-//		    s = s.substring(1);
-//		  }
+
 		  
 		  while(s.charAt(0)=='0')
 			{
@@ -55,8 +53,7 @@ public class MyInteger {
 	public static int parseInt(String s) throws IllegalArgumentException
 	{
 		if(s.length()==0) throw new IllegalArgumentException("leere Eingabe");
-		// pruefe, ob erstes Zeichen + oder -
-		// merken und weiter mit Rest
+
 		boolean negativ = false;
 		if(s.charAt(0)=='+')
 		{
@@ -67,7 +64,6 @@ public class MyInteger {
 			s = s.substring(1);
 			negativ = true;
 		}
-		//der moeglich neue String nachdem fuer +/- geprueft wird
 		if(s.length()==0) throw new IllegalArgumentException("Eingabe ist nur '+' bzw. '-' --> keine Zahl");
 		s=removeLeadingZeros(s);
 		
@@ -76,7 +72,6 @@ public class MyInteger {
 		int exponent = 1;
 		int zahl = 0;
 		
-		//s.length()-1 -> von Einer
 		for(int i = s.length()-1; i>=0; i--)
 		{
 			zahl = zahl + charToInt(s.charAt(i))*exponent;
