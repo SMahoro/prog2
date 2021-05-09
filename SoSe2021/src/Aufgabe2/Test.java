@@ -6,7 +6,7 @@ public class Test {
 
 		MyInteger mi;
 		try {
-			mi = new MyInteger("-49191");
+			mi = new MyInteger("-00564");
 			System.out.println("mi: " +mi.intValue());
 			System.out.println(mi.toString());
 			

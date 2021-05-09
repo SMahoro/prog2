@@ -16,6 +16,26 @@ public class MyInteger {
 		this.value = parseInt(s);
 	}
 	
+	public int intValue()
+	{
+		return this.value;
+	}
+	
+	public double doubleValue()
+	{
+		return this.value;
+	}
+	
+	public static MyInteger valueOf(String s) throws IllegalArgumentException
+	{
+		return new MyInteger(s);
+	}
+	
+	public static MyInteger valueOf(int value)
+	{
+		return new MyInteger(value);
+	}
+	
 	private static boolean charIsDigit(char c)
 	{
 		return (c >= '0' && c <= '9');
@@ -81,26 +101,6 @@ public class MyInteger {
 		else return zahl;
 	}
 	
-	
-	public int intValue()
-	{
-		return this.value;
-	}
-	
-	public double doubleValue()
-	{
-		return this.value;
-	}
-	
-	public static MyInteger valueOf(String s) throws IllegalArgumentException
-	{
-		return new MyInteger(s);
-	}
-	
-	public static MyInteger valueOf(int value)
-	{
-		return new MyInteger(value);
-	}
 	
 	@Override
 	public boolean equals(Object other)
